@@ -50,4 +50,10 @@ setup(
         'plone.app.z3cform'],
     tests_require=tests_require,
     extras_require=dict(tests=tests_require),
-    test_suite = 'Products.Carousel.tests.test_docs.test_suite')
+    test_suite = 'Products.Carousel.tests.test_docs.test_suite'
+
+    entry_points={
+        # -*- Entry points: -*-
+        'z3c.autoinclude.plugin': 'target = plone',
+        },
+    )

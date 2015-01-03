@@ -3,6 +3,11 @@ Change history
 
 2.2.2 (unreleased)
 ------------------
+
+- Added ``z3c.autoinclude``-entrypoint to mark this as a Plone-plugin.
+  This avoids the need to explicitly load the zcml-slug.
+  [WouterVH]
+
 - Added Brazilian Portuguese translation.
   [lepri]
 
