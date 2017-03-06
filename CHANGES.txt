@@ -4,7 +4,13 @@ Change history
 3.1 (unreleased)
 ----------------
 
-- Nothing changed yet.
+- Removed tag from interfaces to fix persmission error.
+    
+- Add width and height to the banner object, since we don't have access to view from
+  macros.
+    
+- Fixes a few small typos and updated MANIFEST.in
+  [jladage]
 
 
 3.0 (2017-03-06)
