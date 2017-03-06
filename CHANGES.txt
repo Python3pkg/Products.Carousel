@@ -1,8 +1,8 @@
 Change history
 ==============
 
-2.2.2 (unreleased)
-------------------
+3.0 (2017-03-06)
+----------------
 
 - Added Retina support to the banners. Simply upload images with double sizes.
   So if you set the Carousel to 800x350 pixels you can now upload images with
