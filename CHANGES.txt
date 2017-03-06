@@ -4,6 +4,25 @@ Change history
 2.2.2 (unreleased)
 ------------------
 
+- Added Retina support to the banners. Simply upload images with double sizes.
+  So if you set the Carousel to 800x350 pixels you can now upload images with
+  a size of 1600x350 pixels. On Retina screens your banners will have much more
+  detail.
+
+    * Use @@images to generate urls to the scales images with sizes defined in
+      the Carousel options. This improves the speed of loading because they are
+      cached in the browser forever. It also prevent users from using images
+      that are way to big.
+
+    * The template now has two scales, one for the regular screens and the
+      2x image for the retina version and defines it in the srcset attribute.
+      The javascript simply adds the srcset as well when using lazyloading.
+
+    * As of this version support for Plone 3 is dropped.
+
+  [jladage]
+
+
 - Added ``z3c.autoinclude``-entrypoint to mark this as a Plone-plugin.
   This avoids the need to explicitly load the zcml-slug.
   [WouterVH]

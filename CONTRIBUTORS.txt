@@ -8,3 +8,4 @@ Contributors
 * Mikko Ohtamaa [miohtama]
 * Roman Kozlovskyi [kroman0]
 * Gustavo Lepri [lepri], Brazilian Portuguese translation
+* Jean-Paul Ladage [jladage], Zest Software

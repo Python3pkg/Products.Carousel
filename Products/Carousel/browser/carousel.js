@@ -86,7 +86,9 @@
         // Triggers actual image load
         img.attr("src", img.attr("data-lazy-load-src"));
         img.removeAttr("data-lazy-load-src");
-
+        // Add an attribute srcset for the 2x image to support retina
+        img.attr("srcset", img.attr("data-lazy-load-src-2x") + " 2x");
+        img.removeAttr("data-lazy-load-src-2x");
       } else {
         // Already loaded / no lazy load
         if(callback) {
