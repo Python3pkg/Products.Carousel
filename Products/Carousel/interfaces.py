@@ -20,6 +20,15 @@ class ICarousel(Interface):
         Returns a list of objects that provide ICarouselBanner.
         """
 
+    def width():
+        """
+        Return the width from the settings, or the width of the image
+        """
+
+    def height():
+        """
+        Return the height from the settings, or the height of the image
+        """
 
 class ICarouselSettings(Interface):
     """
@@ -143,9 +152,6 @@ class ICarouselBanner(Interface):
     def getSize(scale=None):
         """ Wraps the getSize method of the image field.
         """
-
-    def tag(**kw):
-        """ Wraps the tag method of the image field."""
 
 
 class ICarouselBrowserLayer(Interface):

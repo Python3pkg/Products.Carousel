@@ -6,7 +6,7 @@
 .DS_Store
 .long-description.html
 dist
-.intalled.cfg
+.installed.cfg
 develop-eggs
 buildout-cache
 parts

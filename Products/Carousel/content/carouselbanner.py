@@ -28,8 +28,7 @@ CarouselBannerSchema = link.ATLinkSchema.copy() + atapi.Schema((
         validators = (('isNonEmptyFile', V_REQUIRED),
                       ('checkNewsImageMaxSize', V_REQUIRED)),
         widget = atapi.ImageWidget(
-            description = \
-                _(u'This image will be shown when this banner is active.'),
+            description = _(u'This image will be shown when this banner is active.'),
             label= _(u'Image'),
             show_content_type = False)
         ),
@@ -86,5 +85,6 @@ class CarouselBanner(link.ATLink):
     def getSize(self, scale=None):
         "Return the width and height of the image"
         return self.getField('image').getSize(self, scale=scale)
+
 
 atapi.registerType(CarouselBanner, PROJECTNAME)

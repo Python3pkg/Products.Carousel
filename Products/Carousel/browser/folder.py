@@ -33,6 +33,14 @@ class Carousel(ExtensionClass.Base):
 
         return ICarouselSettings(self.context)
 
+    def width(self):
+        width, height = self.getBanners()[0].getSize()
+        return self.getSettings().width or width or 0
+
+    def height(self):
+        width, height = self.getBanners()[0].getSize()
+        return self.getSettings().height or height or 0
+
     def getBanners(self):
         """
         Returns a list of objects that provide ICarouselBanner.
