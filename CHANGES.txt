@@ -1,7 +1,7 @@
 Change history
 ==============
 
-3.0.2 (unreleased)
+3.0.2 (2017-04-11)
 ------------------
 
 - Fixed tests on 4.3 by adding Products.PloneTestCase as test dependency.
