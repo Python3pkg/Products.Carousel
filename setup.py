@@ -22,7 +22,7 @@ tests_require = [
 
 setup(
     name='Products.Carousel',
-    version='3.0.2',
+    version='3.0.3.dev0',
     description="Carousel allows you to add user-configurable rotating "
                 "banners to any section of a Plone site.",
     long_description=long_description,
