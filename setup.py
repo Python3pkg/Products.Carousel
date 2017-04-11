@@ -19,7 +19,10 @@ long_description = (
     read('CONTRIBUTORS.txt'))
 
 
-tests_require=['zope.testing']
+tests_require=[
+    'Products.PloneTestCase',
+    'zope.testing',
+]
 
 
 setup(

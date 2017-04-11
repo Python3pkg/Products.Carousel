@@ -4,17 +4,18 @@ Change history
 3.0.2 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Fixed tests on 4.3 by adding Products.PloneTestCase as test dependency.
+  [maurits]
 
 
 3.0.1 (2017-03-07)
 ------------------
 
-- Removed tag from interfaces to fix persmission error.
-    
+- Removed tag from interfaces to fix permission error.
+
 - Add width and height to the banner object, since we don't have access to view from
   macros.
-    
+
 - Fixes a few small typos and updated MANIFEST.in
   [jladage]
 
