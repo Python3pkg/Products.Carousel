@@ -4,22 +4,17 @@ This module contains the tool of Products.Carousel
 """
 from setuptools import find_packages
 from setuptools import setup
-import os
-
-
-def read(*rnames):
-    return open(os.path.join(os.path.dirname(__file__), *rnames)).read()
 
 
 long_description = (
-    read('README.rst')
+    open('README.rst').read()
     + '\n' +
-    read('CHANGES.txt')
+    open('CHANGES.txt').read()
     + '\n' +
-    read('CONTRIBUTORS.txt'))
+    open('CONTRIBUTORS.txt').read()
+)
 
-
-tests_require=[
+tests_require = [
     'Products.PloneTestCase',
     'zope.testing',
 ]
@@ -28,15 +23,25 @@ tests_require=[
 setup(
     name='Products.Carousel',
     version='3.0.2.dev0',
-    description="Carousel allows you to add user-configurable rotating banners to any section of a Plone site.",
+    description="Carousel allows you to add user-configurable rotating "
+                "banners to any section of a Plone site.",
     long_description=long_description,
-    # Get more strings from http://www.python.org/pypi?%3Aaction=list_classifiers
+    # Get more strings from
+    #  https://pypi.python.org/pypi?%3Aaction=list_classifiers
     classifiers=[
         'Framework :: Plone',
+        'Framework :: Plone :: 4.0',
+        'Framework :: Plone :: 4.1',
+        'Framework :: Plone :: 4.2',
+        'Framework :: Plone :: 4.3',
         'Intended Audience :: Developers',
         'Topic :: Software Development :: Libraries :: Python Modules',
         'License :: OSI Approved :: GNU General Public License (GPL)',
-        'Development Status :: 5 - Production/Stable'],
+        'Development Status :: 5 - Production/Stable',
+        'Programming Language :: Python',
+        'Programming Language :: Python :: 2.6',
+        'Programming Language :: Python :: 2.7',
+    ],
     keywords='plone carousel slideshow banners rotating features',
     author='Groundwire',
     author_email='davidglick@groundwire.org',
@@ -53,10 +58,9 @@ setup(
         'plone.app.z3cform'],
     tests_require=tests_require,
     extras_require=dict(tests=tests_require),
-    test_suite = 'Products.Carousel.tests.test_docs.test_suite',
-
+    test_suite='Products.Carousel.tests.test_docs.test_suite',
     entry_points={
         # -*- Entry points: -*-
         'z3c.autoinclude.plugin': 'target = plone',
-        },
-    )
+    },
+)
