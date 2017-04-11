@@ -9,3 +9,4 @@ Contributors
 * Roman Kozlovskyi [kroman0]
 * Gustavo Lepri [lepri], Brazilian Portuguese translation
 * Jean-Paul Ladage [jladage], Zest Software
+* Maurits van Rees [maurits], Zest Software
