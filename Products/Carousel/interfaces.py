@@ -36,101 +36,101 @@ class ICarouselSettings(Interface):
     """
 
     enabled = schema.Bool(
-        title=_(u'Enabled'),
-        description=_(u'Uncheck this box to hide the Carousel temporarily.'),
+        title=_('Enabled'),
+        description=_('Uncheck this box to hide the Carousel temporarily.'),
         default=True,
     )
 
     banner_template = schema.Choice(
-        title=_(u'Banner Type'),
-        description=_(u'The banner is the part of the Carousel that rotates.'
+        title=_('Banner Type'),
+        description=_('The banner is the part of the Carousel that rotates.'
             ' Choose Default for the standard Carousel banner.'),
         vocabulary='Products.Carousel.BannerTemplates',
     )
 
     banner_elements = schema.List(
         title=_('Banner Elements'),
-        description=_(u'Select the elements that should be visible on the'
-            u' banner. Note that custom banner types may not provide all elements.'),
+        description=_('Select the elements that should be visible on the'
+            ' banner. Note that custom banner types may not provide all elements.'),
         value_type=schema.Choice(
             vocabulary=SimpleVocabulary.fromItems((
-                (_(u'Title'), u'title'),
-                (_(u'Text'), u'text'),
-                (_(u'Image'), u'image'),
+                (_('Title'), 'title'),
+                (_('Text'), 'text'),
+                (_('Image'), 'image'),
             )),
         ),
-        default=[u'title', u'text', u'image'],
+        default=['title', 'text', 'image'],
         required=False,
     )
 
     width = schema.Int(
-        title=_(u'Banner Width'),
-        description=_(u'Enter the width of the banner in pixels. If you leave'
+        title=_('Banner Width'),
+        description=_('Enter the width of the banner in pixels. If you leave'
         ' this field blank, Carousel will use the width of the first banner.'),
         required=False,
     )
 
     height = schema.Int(
-        title=_(u'Banner Height'),
-        description=_(u'Enter the height of the banner in pixels. If you leave'
+        title=_('Banner Height'),
+        description=_('Enter the height of the banner in pixels. If you leave'
         ' this field blank, Carousel will use the height of the first banner.'),
         required=False,
     )
 
     pager_template = schema.Choice(
-        title=_(u'Pager Type'),
-        description=_(u'The pager allows user to navigate between banners.'
+        title=_('Pager Type'),
+        description=_('The pager allows user to navigate between banners.'
         ' Choose the type of pager to display, or select None for no pager.'),
         vocabulary='Products.Carousel.PagerTemplates',
     )
 
     element_id = schema.TextLine(
-        title=_(u'Unique ID'),
-        description=_(u'Enter an ID for the Carousel container element.'
+        title=_('Unique ID'),
+        description=_('Enter an ID for the Carousel container element.'
         ' It can be used to apply CSS to the Carousel.'),
     )
 
     transition_type = schema.Choice(
-        title=_(u'Transition'),
+        title=_('Transition'),
         vocabulary=SimpleVocabulary.fromItems((
-            (_(u'Cross Fade'), u'fade'),
-            (_(u'Slide'), u'slide'),
+            (_('Cross Fade'), 'fade'),
+            (_('Slide'), 'slide'),
         )),
-        default=u'fade',
+        default='fade',
     )
 
     transition_speed = schema.Float(
-        title=_(u'Transition Speed'),
-        description=_(u'Enter the speed of the transition in seconds.'),
+        title=_('Transition Speed'),
+        description=_('Enter the speed of the transition in seconds.'),
         default=0.5,
         min=0.0,
     )
 
     transition_delay = schema.Float(
-        title=_(u'Transition Delay'),
-        description=_(u'Enter the number of seconds that Carousel should pause'
+        title=_('Transition Delay'),
+        description=_('Enter the number of seconds that Carousel should pause'
             ' between banners.'),
         default=8.0,
         min=0.0,
     )
 
     default_page_only = schema.Bool(
-        title=_(u'Only display on the default item'),
-        description=_(u'Only display the Carousel on the default item of this'
+        title=_('Only display on the default item'),
+        description=_('Only display the Carousel on the default item of this'
             ' folder. Otherwise, the Carousel appears on every item in'
             ' the folder.'),
         default=True,
     )
 
     random_order = schema.Bool(
-        title=_(u'Random order'),
-        description=_(u'Carousel pictures will reappear in random order on every page refresh.'),
+        title=_('Random order'),
+        description=_('Carousel pictures will reappear in random order on every page refresh.'),
         default=True,
     )
 
     lazyload = schema.Bool(
-        title=_(u'Enabled lazily load carousel images'),
-        description=_(u'Check this box to conserve the user and the server'
+        title=_('Enabled lazily load carousel images'),
+        description=_('Check this box to conserve the user and the server'
             ' bandwidth if the full carousel cycle is not shown.'),
         default=False,
     )

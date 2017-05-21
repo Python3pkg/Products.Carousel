@@ -12,27 +12,27 @@ class ICarouselDirective(Interface):
     """
     
     name = TextLine(
-        title=u"The name of the banner or pager",
-        description=u"The name shows up in URLs/paths. For example 'foo'.",
+        title="The name of the banner or pager",
+        description="The name shows up in URLs/paths. For example 'foo'.",
         required=True,
         )
         
     template = Path(
-        title=u"The name of a template that implements the banner or pager",
-        description=u"Refers to a file containing a page template (should end in"
-            u"extension '.pt' or '.html').",
+        title="The name of a template that implements the banner or pager",
+        description="Refers to a file containing a page template (should end in"
+            "extension '.pt' or '.html').",
         required=True
         )
     
     title = MessageID(
-        title=u"The browser menu label for the banner or pager",
+        title="The browser menu label for the banner or pager",
         required=True
         )
         
     layer = GlobalInterface(
-        title=u"The layer the banner or pager is declared for",
-        description=u"The default layer for which the banner or pager is "
-                    u"applicable. By default it is applied to all layers.",
+        title="The layer the banner or pager is declared for",
+        description="The default layer for which the banner or pager is "
+                    "applicable. By default it is applied to all layers.",
         required=False
         )
 

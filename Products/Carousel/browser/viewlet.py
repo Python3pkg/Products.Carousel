@@ -70,12 +70,12 @@ class CarouselViewlet(ViewletBase):
             return
 
         self.banners = self._template_for_carousel(
-            settings.banner_template or u'@@banner-default',
+            settings.banner_template or '@@banner-default',
             carousel
         )
 
         self.pager = self._template_for_carousel(
-            settings.pager_template or u'@@pager-numbers',
+            settings.pager_template or '@@pager-numbers',
             carousel
         )
 

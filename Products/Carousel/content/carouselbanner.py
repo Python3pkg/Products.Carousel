@@ -28,8 +28,8 @@ CarouselBannerSchema = link.ATLinkSchema.copy() + atapi.Schema((
         validators = (('isNonEmptyFile', V_REQUIRED),
                       ('checkNewsImageMaxSize', V_REQUIRED)),
         widget = atapi.ImageWidget(
-            description = _(u'This image will be shown when this banner is active.'),
-            label= _(u'Image'),
+            description = _('This image will be shown when this banner is active.'),
+            label= _('Image'),
             show_content_type = False)
         ),
 
@@ -38,9 +38,9 @@ CarouselBannerSchema = link.ATLinkSchema.copy() + atapi.Schema((
         searchable=False,
         default = "http://",
         widget = atapi.StringWidget(
-            description = _(u'Instead of uploading an image, you may enter'
-                u' the URL of an image hosted on another server.'),
-            label = _(u'Image URL'),
+            description = _('Instead of uploading an image, you may enter'
+                ' the URL of an image hosted on another server.'),
+            label = _('Image URL'),
             maxlength = '511')
         ),
 
@@ -49,7 +49,7 @@ CarouselBannerSchema = link.ATLinkSchema.copy() + atapi.Schema((
         validators = ('isTidyHtmlWithCleanup',),
         default_output_type = 'text/x-html-safe',
         widget=atapi.RichWidget(
-            label=_(u'Body'),
+            label=_('Body'),
         ),
     ),
 
@@ -64,7 +64,7 @@ CarouselBannerSchema['description'].widget.visible = {
     'view': 'hidden',
     'edit': 'hidden'
 }
-CarouselBannerSchema['remoteUrl'].widget.label = _(u'Link URL')
+CarouselBannerSchema['remoteUrl'].widget.label = _('Link URL')
 CarouselBannerSchema['remoteUrl'].required = False
 
 schemata.finalizeATCTSchema(CarouselBannerSchema, moveDiscussion=False)

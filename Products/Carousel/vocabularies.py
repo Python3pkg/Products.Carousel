@@ -25,10 +25,10 @@ def uniqueMenuItems(items, sort_first):
     
     results = {}
     for item in items:
-        if not item['title'] in results.keys() \
-            and not item['action'] in results.values():
+        if not item['title'] in list(results.keys()) \
+            and not item['action'] in list(results.values()):
             results[item['title']] = item['action']
-    return sorted(results.items(),
+    return sorted(list(results.items()),
         key=lambda item: (item[0] != sort_first, item))
 
 def getBannerTemplates(context):

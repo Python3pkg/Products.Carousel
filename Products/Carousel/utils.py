@@ -20,7 +20,7 @@ def registerViewlet(manager):
         CarouselViewlet,
         required = (Interface, IDefaultBrowserLayer, IBrowserView, manager),
         provided = IViewlet,
-        name = u'Products.Carousel.viewlet'
+        name = 'Products.Carousel.viewlet'
         )
 
 def unregisterViewlet():
@@ -43,7 +43,7 @@ def addPermissionsForRole(context, role, wanted_permissions):
     All wanted_permissions lose their acquiring ability
     """
 
-    assert type(wanted_permissions) == types.TupleType
+    assert type(wanted_permissions) == tuple
 
     #print "Doing role:" + role + " perms:" + str(wanted_permissions)
     for p in context.ac_inherited_permissions(all=True):
@@ -68,7 +68,7 @@ def removePermissionsForRole(context, role, wanted_permissions):
     All wanted_permissions lose their acquiring ability
     """        
 
-    assert type(wanted_permissions) == types.TupleType
+    assert type(wanted_permissions) == tuple
 
     #print "Doing role:" + role + " perms:" + str(wanted_permissions)
     for p in context.ac_inherited_permissions(all=True):

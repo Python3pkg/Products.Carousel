@@ -76,13 +76,13 @@ class CarouselSettings(Persistent):
     adapts(ICarouselFolder)
 
     enabled = True
-    banner_template = u'@@banner-default'
-    banner_elements = [u'title', u'text', u'image']
+    banner_template = '@@banner-default'
+    banner_elements = ['title', 'text', 'image']
     width = None
     height = None
-    pager_template = u'@@pager-numbers'
-    element_id = u'carousel-default'
-    transition_type = u'fade'
+    pager_template = '@@pager-numbers'
+    element_id = 'carousel-default'
+    transition_type = 'fade'
     transition_speed = 0.5
     transition_delay = 8.0
     default_page_only = True
@@ -90,7 +90,7 @@ class CarouselSettings(Persistent):
     random_order = False
 
     def __init__(self):
-        self.element_id = u'carousel-%s' % hash(time())
+        self.element_id = 'carousel-%s' % hash(time())
 
 CarouselSettingsFactory = factory(CarouselSettings)
 
@@ -100,7 +100,7 @@ class AppearanceGroup(group.Group):
     Appearance options.
     """
 
-    label = _(u'Appearance')
+    label = _('Appearance')
     fields = field.Fields(ICarouselSettings).select(
         'banner_template', 'banner_elements', 'width', 'height',
         'pager_template', 'element_id', 'lazyload', 'random_order')
@@ -114,7 +114,7 @@ class TransitionGroup(group.Group):
     Transition options.
     """
 
-    label = _(u'Transition')
+    label = _('Transition')
     fields = field.Fields(ICarouselSettings).select(
         'transition_type', 'transition_speed', 'transition_delay')
 
@@ -124,7 +124,7 @@ class DisplayGroup(group.Group):
     Display options.
     """
 
-    label = _(u'Display')
+    label = _('Display')
     fields = field.Fields(ICarouselSettings).select(
         'enabled', 'default_page_only')
     fields['enabled'].widgetFactory = SingleCheckBoxFieldWidget
@@ -136,13 +136,13 @@ class CarouselSettingsForm(group.GroupForm, form.EditForm):
     Form for editing Carousel settings.
     """
 
-    label = _(u'Carousel Settings')
+    label = _('Carousel Settings')
     groups = (AppearanceGroup, TransitionGroup, DisplayGroup,)
 
     def getContent(self):
         return ICarouselSettings(self.context)
 
-CarouselSettingsForm.buttons['apply'].title = _(u'Save')
+CarouselSettingsForm.buttons['apply'].title = _('Save')
 
 
 class CarouselSettingsView(FormWrapper):

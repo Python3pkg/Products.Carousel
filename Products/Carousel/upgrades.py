@@ -38,8 +38,8 @@ def upgrade_11_to_20b1(setup_tool):
     # Change the tab name to Carousel.
     actions = getToolByName(setup_tool, 'portal_actions')
     obj_actions = actions.get('object', {})
-    if 'carousel' in obj_actions.keys():
-        obj_actions['carousel'].title = _(u'Carousel')
+    if 'carousel' in list(obj_actions.keys()):
+        obj_actions['carousel'].title = _('Carousel')
 
 def upgrade_21b3_to_10(setup_tool):
     """
